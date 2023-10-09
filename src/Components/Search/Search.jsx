@@ -1,17 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import "./search.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 function Search() {
+  const [term, setTerm] = useState();
+  const submitHandler = (e) => {
+    e.preventDefault();
+  };
   return (
-    <div className="wrap">
+    <div>
       <div className="search">
-        <input
-          type="text"
-          className="searchTerm"
-          placeholder="What are you looking for?"
-        />
-        <button type="submit" className="searchButton">
-          <i className="fa fa-search"></i>
-        </button>
+        <form onSubmit={submitHandler}>
+          <input
+            value={term}
+            onChange={(e) => setTerm(e.target.value)}
+            type="text"
+            className="searchTerm"
+            placeholder="What are you looking for?"
+          />
+          <button type="submit" className="searchButton">
+            <FontAwesomeIcon icon={faMagnifyingGlass} />
+          </button>
+        </form>
       </div>
     </div>
   );

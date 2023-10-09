@@ -65,7 +65,7 @@ function Main() {
                 </div>
                 <div className="description">
                   <p>{item.title}</p>
-                  <p>{item.price}</p>
+                  <p> ₹ {item.price}</p>
                   <p>
                     {item.rating.rate} ({item.rating.count})
                   </p>

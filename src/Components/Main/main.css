@@ -1,41 +1,30 @@
-.heart-container {
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.wrapper .heart-container {
   position: relative;
 }
-
-.heart {
+.wrapper .heart-container .heart {
   margin-right: 0.5rem;
-
   height: 20px;
   right: 2px;
   cursor: pointer;
   position: absolute;
   right: 0px;
 }
-.wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.container {
+.wrapper .container {
   width: 20vw;
   height: 50vh;
   margin: 0 5vh 5vh 5vh;
   border: 1px solid black;
   position: relative;
 }
-
-img {
-  height: 30vh;
-  object-fit: contain;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-.image-div {
+.wrapper .container .image-div {
   position: relative;
 }
-.view {
+.wrapper .container .image-div .view {
   margin: auto;
   text-align: center;
   background-color: skyblue;
@@ -47,14 +36,22 @@ img {
   transition: all 200ms linear;
   transition: 5ms ease-in-out;
 }
-
-.description {
+.wrapper .container .image-div img {
+  height: 30vh;
+  -o-object-fit: contain;
+     object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.wrapper .container .description {
   width: inherit;
   height: 20vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.description p {
+.wrapper .container .description p {
   margin: 2px;
-}
+}/*# sourceMappingURL=main.css.map */

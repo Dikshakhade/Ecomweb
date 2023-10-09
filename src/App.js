@@ -1,4 +1,4 @@
-import Main from "./Components/Main";
+import Main from "./Components/Main/Main";
 import { useCallback } from "react";
 import Search from "./Components/Search/Search";
 function App() {
