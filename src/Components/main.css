@@ -1,0 +1,60 @@
+.heart-container {
+  position: relative;
+}
+
+.heart {
+  margin-right: 0.5rem;
+
+  height: 20px;
+  right: 2px;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+}
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.container {
+  width: 20vw;
+  height: 50vh;
+  margin: 0 5vh 5vh 5vh;
+  border: 1px solid black;
+  position: relative;
+}
+
+img {
+  height: 30vh;
+  object-fit: contain;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.image-div {
+  position: relative;
+}
+.view {
+  margin: auto;
+  text-align: center;
+  background-color: skyblue;
+  height: 5vh;
+  width: 100%;
+  position: absolute;
+  bottom: 2px;
+  opacity: 0.5;
+  transition: all 200ms linear;
+  transition: 5ms ease-in-out;
+}
+
+.description {
+  width: inherit;
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.description p {
+  margin: 2px;
+}
