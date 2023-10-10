@@ -5,8 +5,15 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { Context } from "../../App";
 
 function Search() {
-  const [products, setProducts, searchResults, setSearchResults] =
-    useContext(Context);
+  const [
+    products,
+    setProducts,
+    searchResults,
+    setSearchResults,
+    category,
+    item,
+    setItem,
+  ] = useContext(Context);
 
   const submitHandler = (e) => {
     e.preventDefault();
