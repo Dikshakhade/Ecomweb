@@ -3,6 +3,8 @@ import "./search.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { Context } from "../../App";
+import Trending from "./Trending";
+import { createPortal } from "react-dom";
 
 function Search() {
   const [
@@ -14,6 +16,8 @@ function Search() {
     item,
     setItem,
   ] = useContext(Context);
+
+  const [showModal, setShowModal] = useState(false);
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -39,8 +43,16 @@ function Search() {
           placeholder="What are you looking for?"
         />
         <button type="submit" className="searchButton">
-          <FontAwesomeIcon icon={faMagnifyingGlass} />
+          <FontAwesomeIcon
+            icon={faMagnifyingGlass}
+            onClick={() => setShowModal(true)}
+          />
         </button>
+        {showModal &&
+          createPortal(
+            <Trending onClose={() => setShowModal(false)} />,
+            document.body
+          )}
       </form>
     </div>
   );
