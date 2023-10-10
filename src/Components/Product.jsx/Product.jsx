@@ -35,7 +35,7 @@ function Product({ product }) {
           </div>
           <div className="description">
             <p>{product.title}</p>
-            <p> ₹ {product.price}</p>
+            <p style={{ color: "rgba(118, 8, 243)" }}> ₹ {product.price}</p>
             <p>
               <StarRating stars={product.rating.rate} /> ({product.rating.count}
               )

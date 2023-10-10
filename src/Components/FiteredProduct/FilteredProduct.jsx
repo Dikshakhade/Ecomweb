@@ -16,7 +16,13 @@ function FilteredProduct() {
     <Product key={product.id} product={product} />
   ));
   const content = result ? result : <h1>No Matching Product</h1>;
-  return <div>{content}</div>;
+  return (
+    <div
+      style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
+    >
+      {content}
+    </div>
+  );
 }
 
 export default FilteredProduct;

@@ -8,7 +8,7 @@
   width: 18vw;
   height: 50vh;
   margin: 0 5vh 5vh 5vh;
-  /* border: 1px solid black; */
+  cursor: pointer;
   position: relative;
 }
 .image-div {
@@ -17,12 +17,13 @@
 .view {
   margin: auto;
   text-align: center;
-  background-color: skyblue;
+  background: rgba(118, 8, 243, 0.5);
   height: 5vh;
   width: 100%;
+  line-height: 5vh;
   position: absolute;
   bottom: 2px;
-  opacity: 0.5;
+  color: aliceblue;
   transition: all 200ms linear;
   transition: 5ms ease-in-out;
 }

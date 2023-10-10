@@ -20,21 +20,13 @@ function ProductPage() {
       <Product key={product.id} product={product} />
     ));
   }
-  // if (item.length) {
-  //   result = item.map((product) => (
-  //     <Product key={product.id} product={product} />
-  //   ));
-  // }
 
   const content = result ? result : <h1>No Matching Product</h1>;
-
-  // const contentCategory = resultCategory.length ? resultCategory : <h1>No</h1>;
 
   return (
     <div
       style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
     >
-      {/* {resultCategory.length ? contentCategory : content} */}
       {content}
     </div>
   );
