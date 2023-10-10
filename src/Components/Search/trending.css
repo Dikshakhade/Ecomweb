@@ -12,32 +12,36 @@
   bottom: 70px;
   padding-left: 1rem;
 }
-.cancel {
-  height: 5vh;
+.modal .cancel {
+  height: 3vh;
   width: 2vw;
+  color: #1b1b1b;
   cursor: pointer;
   position: absolute;
   right: 10px;
+  top: 2px;
 }
 .modal h1 {
-  font-weight: 100;
+  font-weight: 50;
+  font-size: 1.2rem;
+  padding: 1rem;
 }
-.modal-image {
+.modal .modal-image {
   width: 15vw;
   height: 10vh;
-
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.modal-image img {
+.modal .modal-image img {
   height: 15vh;
   width: 15vw;
   padding: 4vh;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   display: block;
 }
-.modal-title {
+.modal .modal-title {
   font-weight: 50;
-  margin: 2px;
-}
+}/*# sourceMappingURL=trending.css.map */

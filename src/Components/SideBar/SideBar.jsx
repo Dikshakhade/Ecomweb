@@ -19,7 +19,7 @@ function SideBar({ filterItems, setItem }) {
                   filterItems(cat);
                 }}
               />
-              <label>{cat[0].toUpperCase() + cat.slice(1)} </label>{" "}
+              <label>{cat[0].toUpperCase() + cat.slice(1)}</label>{" "}
             </div>
           );
         })}

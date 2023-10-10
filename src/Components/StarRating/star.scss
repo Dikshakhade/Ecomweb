@@ -1,0 +1,26 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+
+.stars-gray {
+  position: relative;
+  display: inline-block;
+  .stars-yellow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    &::before {
+      content: "\f005 \f005 \f005 \f005 \f005";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 700;
+      color: #f8ce0b;
+    }
+  }
+  &::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    color: #ccc;
+  }
+}
