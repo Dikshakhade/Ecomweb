@@ -3,6 +3,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import "./product.css";
+import StarRating from "../StarRating/StarRating";
 function Product({ product }) {
   const [heart, setHeart] = useState(false);
   const [view, setView] = useState(false);
@@ -36,7 +37,8 @@ function Product({ product }) {
             <p>{product.title}</p>
             <p> ₹ {product.price}</p>
             <p>
-              {product.rating.rate} ({product.rating.count})
+              <StarRating stars={product.rating.rate} /> ({product.rating.count}
+              )
             </p>
           </div>
         </div>

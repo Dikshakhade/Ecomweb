@@ -1,14 +1,43 @@
 .modal {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: column;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   background-color: white;
   border: 2px solid rgb(240, 240, 240);
   border-radius: 12px;
   position: absolute;
-  width: 250px;
+  width: 50vw;
   top: 70px;
-  left: calc(50% - 125px);
+  left: calc(50% - 350px);
   bottom: 70px;
+  padding-left: 1rem;
+}
+.cancel {
+  height: 5vh;
+  width: 2vw;
+  cursor: pointer;
+  position: absolute;
+  right: 10px;
+}
+.modal h1 {
+  font-weight: 100;
+}
+.modal-image {
+  width: 15vw;
+  height: 10vh;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-image img {
+  height: 15vh;
+  width: 15vw;
+  padding: 4vh;
+  object-fit: contain;
+  display: block;
+}
+.modal-title {
+  font-weight: 50;
+  margin: 2px;
 }

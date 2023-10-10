@@ -38,15 +38,13 @@ function Search() {
       <form onSubmit={submitHandler} className="search">
         <input
           onChange={handleSearchChange}
+          onClick={() => setShowModal(true)}
           type="text"
           className="searchTerm"
           placeholder="What are you looking for?"
         />
         <button type="submit" className="searchButton">
-          <FontAwesomeIcon
-            icon={faMagnifyingGlass}
-            onClick={() => setShowModal(true)}
-          />
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
         </button>
         {showModal &&
           createPortal(
