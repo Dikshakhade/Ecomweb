@@ -1,22 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import "./sidebar.css";
+import { Context } from "../../App";
 function SideBar() {
+  const [products, setProducts, searchResults, setSearchResults, category] =
+    useContext(Context);
   return (
     <div className="sidebar">
       <div className="categories">
         <p>Category</p>
-        <div className="each-input">
-          <input type="checkbox" />
-          <label>Mens </label>{" "}
-        </div>
-        <div className="each-input">
-          <input type="checkbox" />
-          <label>Jwellery</label>{" "}
-        </div>
-        <div className="each-input">
-          <input type="checkbox" />
-          <label>Electronics</label>{" "}
-        </div>
+
+        {category.map((cat, i) => {
+          return (
+            <div className="each-input" key={i}>
+              <input type="checkbox" />
+              <label>{cat} </label>{" "}
+            </div>
+          );
+        })}
       </div>
       <div className="categories">
         <p>Price</p>

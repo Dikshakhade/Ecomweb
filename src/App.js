@@ -3,6 +3,7 @@ import { getProducts } from "./api/axios";
 import { createContext, useState, useEffect } from "react";
 import Search from "./Components/Search/Search";
 import SideBar from "./Components/SideBar/SideBar";
+import ProductPage from "./Components/ProductPage/ProductPage";
 
 export const Context = createContext();
 function App() {
@@ -16,15 +17,23 @@ function App() {
     });
   }, []);
 
+  const category = [...new Set(products.map((product) => product.category))];
+
+  const initialState = [
+    products,
+    setProducts,
+    searchResults,
+    setSearchResults,
+    category,
+  ];
   return (
-    <Context.Provider
-      value={[products, setProducts, searchResults, setSearchResults]}
-    >
+    <Context.Provider value={initialState}>
       <div className="App">
         <Search />
         <div style={{ display: "flex" }}>
           <SideBar />
-          <Main />
+          {/* <Main /> */}
+          <ProductPage />
         </div>
       </div>
     </Context.Provider>

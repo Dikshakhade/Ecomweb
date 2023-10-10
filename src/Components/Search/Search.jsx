@@ -5,7 +5,6 @@ import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
 import { Context } from "../../App";
 
 function Search() {
-  const [term, setTerm] = useState();
   const [products, setProducts, searchResults, setSearchResults] =
     useContext(Context);
 
@@ -27,7 +26,6 @@ function Search() {
     <div>
       <form onSubmit={submitHandler} className="search">
         <input
-          value={term}
           onChange={handleSearchChange}
           type="text"
           className="searchTerm"
