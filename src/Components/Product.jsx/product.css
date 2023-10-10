@@ -6,8 +6,8 @@
 
 .container {
   width: 18vw;
-  height: 52vh;
-  margin: 0 5vh 5vh 5vh;
+  height: 60vh;
+  margin: 0 7vh 7vh 7vh;
   cursor: pointer;
   box-shadow: rgba(100, 100, 111, 0.3) 0px 7px 29px 0px;
   position: relative;
@@ -39,7 +39,7 @@
 }
 .container .description {
   width: inherit;
-  height: 20vh;
+  height: 25vh;
   font-size: 1.1rem;
   display: flex;
   flex-direction: column;
@@ -47,4 +47,28 @@
 }
 .container .description p {
   margin: 0.3rem;
+}
+
+@media screen and (max-width: 900px) {
+  .main-product-display {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  .heart-container {
+    position: absolute;
+    right: 25vh;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    height: 150%;
+    margin: 5vh 5vh;
+  }
+  .container .description {
+    height: 50%;
+  }
 }/*# sourceMappingURL=product.css.map */

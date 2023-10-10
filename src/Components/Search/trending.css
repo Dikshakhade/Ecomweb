@@ -44,4 +44,10 @@
 }
 .modal .modal-title {
   font-weight: 50;
+}
+
+@media screen and (max-width: 900px) {
+  .modal {
+    left: calc(50% - 190px);
+  }
 }/*# sourceMappingURL=trending.css.map */

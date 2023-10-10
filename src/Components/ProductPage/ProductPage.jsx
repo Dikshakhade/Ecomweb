@@ -2,7 +2,7 @@ import React from "react";
 import { Context } from "../../App";
 import Product from "../Product.jsx/Product";
 import { useContext } from "react";
-
+import "./productpage.css";
 function ProductPage() {
   const [
     products,
@@ -23,13 +23,7 @@ function ProductPage() {
 
   const content = result ? result : <h1>No Matching Product</h1>;
 
-  return (
-    <div
-      style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
-    >
-      {content}
-    </div>
-  );
+  return <div className="product-container">{content}</div>;
 }
 
 export default ProductPage;
