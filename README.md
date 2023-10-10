@@ -1,3 +1,3 @@
 # Ecomweb
-## A small Ecommerce application 
-### With search and filter features 
+ A small Ecommerce application 
+ With search and filter features 
