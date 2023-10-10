@@ -1,17 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import "./main.css";
+import { Context } from "../../App";
 function Main() {
   const [data, SetData] = useState([]);
   const [heart, setHeart] = useState(Array(20).fill(false));
   const [view, setView] = useState(Array(20).fill(false));
 
-  useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((json) => SetData(json));
-  }, []);
+  const [products, setProducts, searchResults, setSearchResults] =
+    useContext(Context);
+
+  // useEffect(() => {
+  //   fetch("https://fakestoreapi.com/products")
+  //     .then((res) => res.json())
+  //     .then((json) => SetData(json));
+  // }, []);
 
   function handleHeart(index) {
     const nextHeart = heart.map((eachHeart, i) => {
@@ -33,13 +37,13 @@ function Main() {
     });
     setView(nextView);
   }
-
+  console.log(data);
   return (
     <div className="wrapper">
-      {data[0] &&
-        data.map((item, i) => {
+      {products[0] &&
+        products.map((item, i) => {
           return (
-            <div style={{ display: "flex", flexDirection: "column" }}>
+            <div style={{ display: "flex", flexDirection: "column" }} key={i}>
               <div className="heart-container">
                 <FontAwesomeIcon
                   className="heart"

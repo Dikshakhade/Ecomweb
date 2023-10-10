@@ -1,0 +1,18 @@
+.sidebar {
+  width: 20vw;
+}
+.categories {
+  margin: 1rem;
+}
+.categories p {
+  font-weight: bolder;
+}
+.each-input {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.each-input label {
+  position: relative;
+  cursor: pointer;
+}
